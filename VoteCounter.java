@@ -54,4 +54,5 @@ public class VoteCounter extends ConsoleProgram {
 		//println(indivNames.get(key));
 		println(indivNames);
 }
+	}
 }
