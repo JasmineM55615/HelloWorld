@@ -27,7 +27,11 @@ public class VoteCounter extends ConsoleProgram {
 	 * the problem specification. 
 	 */
 	private void printVoteCounts(ArrayList<String> votes) {
-		// gor thorugh each index starting at one
+		// go thorugh each index and get the name at that index
+		// go through every other index and check if it has the same name as the one we chose
+		//if it does, we add one and save that name to a string
+		
+		// 
 		check 
 	}
 }
