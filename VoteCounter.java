@@ -38,7 +38,11 @@ public class VoteCounter extends ConsoleProgram {
 		int len = votes.size();
 		for(int i = 0; i < len; i++) {
 			String name = votes.get(i);
+			int nameCount = 0;
 			for(int j = i + 1; j < len; j++) {
+				if(votes.get(j).equals(name)) {
+					nameCount++;
+				}
 				
 			}
 			
