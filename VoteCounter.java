@@ -43,7 +43,7 @@ public class VoteCounter extends ConsoleProgram {
 				if(votes.get(j).equals(name)) {
 					nameCount++;
 				}else {
-					nameCount += 1;
+					nameCount = 5;
 				}
 				
 			}
