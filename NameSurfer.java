@@ -18,6 +18,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	 * This method has the responsibility for reading in the data base
 	 * and initializing the interactors at the top of the window.
 	 */
+	private JBUtton name = new JButton(15);
 	private JTextField name = new JTextField(15);
 	public void init() {
 		// You fill this in, along with any helper methods //
