@@ -32,11 +32,13 @@ public class VoteCounter extends ConsoleProgram {
 		//if it does, we add one and save that name to another string
 		//repeat
 		
-		int len = votes.size();
-		println(len);
-		//for(int i = 0; i < votes.length; i++) {
+
+		ArrayList<String> indivNames = new ArrayList<String>();
+		for(int i = 0; i < votes.size(); i++) {
+			String name = votes.get(i);
 			
-		//}
+			
+		}
 
 	}
 }
