@@ -1,7 +1,12 @@
 /*
  * File: VoteCounter.java
  * ---------------------
- * A sandcastle program that uses collections to tally votes 
+ * Name: Jasmine Mann
+ * Section Leader: Trey Connelly
+ * A sandcastle program that uses collections to tally votes.
+ * It checks how many time each student has been voted for
+ * and prints out the studnet's name with the number of votes
+ * they have beside it.
  */
 
 import acm.program.*;
@@ -23,8 +28,9 @@ public class VoteCounter extends ConsoleProgram {
 	}
 
 	/*
-	 * Your job is to implement this method according to 
-	 * the problem specification. 
+	 * Goes through the arraylist votes and checks how many times a single name appears
+	 * and keeps track of the count of each name. It prints out each individual name
+	 * with the number of votes it has beside it.
 	 */
 	private void printVoteCounts(ArrayList<String> votes) {
 		HashMap<String, Integer> indivNames = new HashMap<String, Integer>();
@@ -34,9 +40,9 @@ public class VoteCounter extends ConsoleProgram {
 			int nameCount = 0;
 			for(int j = 0; j < len; j++) {
 				if(votes.get(j).equals(name)) {
-					nameCount++;
+					nameCount++; //adds one to nameCount each time that name appears in the arraylist
 				}
-				indivNames.put(name, nameCount);
+				indivNames.put(name, nameCount); //adds the name of person and the number of votes they have to a new HashMap
 			}
 		}
 		for(String key: indivNames.keySet()) {
