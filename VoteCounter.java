@@ -36,10 +36,10 @@ public class VoteCounter extends ConsoleProgram {
 		HashMap<String, Integer> indivNames = new HashMap<String, Integer>();
 		//ArrayList<String> indivNames = new ArrayList<String>();
 		int len = votes.size();
-		int nameCount = 0;
+		//int nameCount = 0;
 		for(int i = 0; i < len; i++) {
 			String name = votes.get(i);
-			//int nameCount = 0;
+			int nameCount = 0;
 			for(int j = 0; j < len; j++) {
 				if(votes.get(j).equals(name)) {
 					nameCount++;
