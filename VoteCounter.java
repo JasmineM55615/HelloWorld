@@ -43,9 +43,9 @@ public class VoteCounter extends ConsoleProgram {
 			for(int j = 0; j < len; j++) {
 				if(votes.get(j).equals(name)) {
 					nameCount++;
-				}else if(!votes.get(j).equals(name)){
-					nameCount = 5;
-				}
+//				}else if(!votes.get(j).equals(name)){
+//					//nameCount = 5;
+//				}
 				indivNames.put(name, nameCount);
 			}
 		//	indivNames.put(name, nameCount);
