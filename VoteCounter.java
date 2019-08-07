@@ -42,11 +42,14 @@ public class VoteCounter extends ConsoleProgram {
 			for(int j = i + 1; j < len; j++) {
 				if(votes.get(j).equals(name)) {
 					nameCount++;
+				}else {
+					nameCount = 1;
 				}
 				
 			}
-			
+			indivNames.put(name, nameCount);
 		}
 
+		println(indivNames);
 	}
 }
