@@ -32,6 +32,7 @@ public class VoteCounter extends ConsoleProgram {
 		//if it does, we add one and save that name to another string
 		//repeat
 		
+		int len = votes.length;
 		for(int i = 0; i < votes.length; i++) {
 			
 		}
