@@ -36,7 +36,7 @@ public class VoteCounter extends ConsoleProgram {
 		ArrayList<String> indivNames = new ArrayList<String>();
 		for(int i = 0; i < votes.size(); i++) {
 			String name = votes.get(i);
-			
+			for(int i )
 			
 		}
 
