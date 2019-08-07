@@ -20,7 +20,11 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	 */
 	
 	private JLabel label = new JLabel("Name:");
+	putName.addActionListener(this);
+	putName.setActionCommand("Go");
 	private JTextField putName = new JTextField(TEXT_FIELD_WIDTH);
+	putName.addActionListener(this);
+	putName.setActionCommand("Go");
 	private JButton graph = new JButton("Graph");
 	private JButton clear = new JButton("Clear");
 	public void init() {
