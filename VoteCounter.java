@@ -50,5 +50,6 @@ public class VoteCounter extends ConsoleProgram {
 			indivNames.put(name, nameCount);
 		}
 
-		println(indivNames.get(key) +  )
+		println(indivNames.get(key));
+}
 }
