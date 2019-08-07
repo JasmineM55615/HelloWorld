@@ -40,7 +40,7 @@ public class VoteCounter extends ConsoleProgram {
 			}
 		}
 		for(String key: indivNames.keySet()) {
-			println(key + ": " + indivNames.get(key));
+			println("Votes for " + key + ": " + indivNames.get(key));
 		}
 		//println(indivNames);
 	}
