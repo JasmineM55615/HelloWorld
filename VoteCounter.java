@@ -35,9 +35,12 @@ public class VoteCounter extends ConsoleProgram {
 
 		HashMap<String, Integer> indivNames = new HashMap<String, Integer>();
 		//ArrayList<String> indivNames = new ArrayList<String>();
-		for(int i = 0; i < votes.size(); i++) {
+		int len = votes.size();
+		for(int i = 0; i < len; i++) {
 			String name = votes.get(i);
-			for(int i )
+			for(int j = i + 1; j < len; j++) {
+				
+			}
 			
 		}
 
