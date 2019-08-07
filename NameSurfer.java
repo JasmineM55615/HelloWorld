@@ -20,8 +20,6 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	 */
 	
 	private JLabel label = new JLabel("Name:");
-	putName.addActionListener(this);
-	putName.setActionCommand("Go");
 	private JTextField putName = new JTextField(TEXT_FIELD_WIDTH);
 //	putName.addActionListener(this);
 //	putName.setActionCommand("Go");
@@ -30,6 +28,8 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	public void init() {
 		// You fill this in, along with any helper methods //
 		add(label, NORTH);
+		putName.addActionListener(this);
+		putName.setActionCommand("Go");
 		add(putName, NORTH);
 		add(graph, NORTH);
 		add(clear, NORTH);
