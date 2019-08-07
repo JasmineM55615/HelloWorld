@@ -40,7 +40,8 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		// You fill this in //
 		String newStrName = putName.getText();
 		newStrName.toLowerCase();
-		
+		char c = Character.toUpperCase(newStrName.charAt(0));
+		println(newStrName);
 	}
 	
 	/**
