@@ -19,41 +19,26 @@ public class VoteCounter extends ConsoleProgram {
 		votes.add("Trillian McMillian");
 		votes.add("Zaphod Beeblebrox");
 		printVoteCounts(votes);
-		
+
 	}
-	
+
 	/*
 	 * Your job is to implement this method according to 
 	 * the problem specification. 
 	 */
 	private void printVoteCounts(ArrayList<String> votes) {
-		// go thorugh each index and get the name at that index
-		// go through every other index and check if it has the same name as the one we chose
-		//if it does, we add one and save that name to another string
-		//repeat
-		
-
 		HashMap<String, Integer> indivNames = new HashMap<String, Integer>();
-		//ArrayList<String> indivNames = new ArrayList<String>();
 		int len = votes.size();
-		//int nameCount = 0;
 		for(int i = 0; i < len; i++) {
 			String name = votes.get(i);
 			int nameCount = 0;
 			for(int j = 0; j < len; j++) {
 				if(votes.get(j).equals(name)) {
 					nameCount++;
-//				}else if(!votes.get(j).equals(name)){
-//					//nameCount = 5;
-//				}
-				//indivNames.put(name, nameCount);
+				}
+				indivNames.put(name, nameCount);
 			}
-			indivNames.put(name, nameCount);
 		}
-
-		//println(indivNames.get(key));
-//		println(indivNames);
-}
 		println(indivNames);
 	}
 }
