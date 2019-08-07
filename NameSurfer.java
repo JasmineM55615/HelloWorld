@@ -38,6 +38,8 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	 */
 	public void actionPerformed(ActionEvent e) {
 		// You fill this in //
+		String newStrName = putName.getText();
+		
 	}
 	
 	/**
