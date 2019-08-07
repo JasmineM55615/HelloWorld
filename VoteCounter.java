@@ -29,9 +29,12 @@ public class VoteCounter extends ConsoleProgram {
 	private void printVoteCounts(ArrayList<String> votes) {
 		// go thorugh each index and get the name at that index
 		// go through every other index and check if it has the same name as the one we chose
-		//if it does, we add one and save that name to a string
+		//if it does, we add one and save that name to another string
+		//repeat
 		
-		// 
-		check 
+		for(int i = 0; i < votes.length; i++) {
+			
+		}
+
 	}
 }
