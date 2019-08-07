@@ -27,6 +27,7 @@ public class VoteCounter extends ConsoleProgram {
 	 * the problem specification. 
 	 */
 	private void printVoteCounts(ArrayList<String> votes) {
-		// TODO
+		// gor thorugh each index starting at one
+		check 
 	}
 }
