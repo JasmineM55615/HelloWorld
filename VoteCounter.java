@@ -39,7 +39,7 @@ public class VoteCounter extends ConsoleProgram {
 		for(int i = 0; i < len; i++) {
 			String name = votes.get(i);
 			int nameCount = 0;
-			for(int j = i + 1; j < len; j++) {
+			for(int j = 0; j < len; j++) {
 				if(votes.get(j).equals(name)) {
 					nameCount++;
 				}else {
@@ -50,6 +50,7 @@ public class VoteCounter extends ConsoleProgram {
 			indivNames.put(name, nameCount);
 		}
 
-		println(indivNames.get(key));
+		//println(indivNames.get(key));
+		println(indivNames);
 }
 }
