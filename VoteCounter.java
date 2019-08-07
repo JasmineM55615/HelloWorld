@@ -39,7 +39,7 @@ public class VoteCounter extends ConsoleProgram {
 			String name = votes.get(i);
 			int nameCount = 0;
 			for(int j = 0; j < len; j++) {
-				if(votes.get(j).equals(name)) {
+				if(votes.get(j).equals(name)) { //goes through the arraylist votes to see how many times the name appears
 					nameCount++; //adds one to nameCount each time that name appears in the arraylist
 				}
 				indivNames.put(name, nameCount); //adds the name of person and the number of votes they have to a new HashMap
