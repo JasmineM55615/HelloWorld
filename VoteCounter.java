@@ -23,7 +23,6 @@ public class VoteCounter extends ConsoleProgram {
 		votes.add("Mr. Zarniwoop");
 		votes.add("Trillian McMillian");
 		votes.add("Zaphod Beeblebrox");
-		votes.add("Zaphod Beeblebrox");
 		printVoteCounts(votes);
 
 	}
