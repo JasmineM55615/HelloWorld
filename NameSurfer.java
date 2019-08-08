@@ -46,7 +46,6 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		String newStrName = putName.getText();
 		newStrName.toLowerCase();
 		char c = Character.toUpperCase(newStrName.charAt(0));
-		e.getActionCommand.equals("Graph");
 		if(e.getActionCommand.equals("Graph")){
 			println("You pressed enter or the button");
 		}
