@@ -21,15 +21,13 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	
 	private JLabel label = new JLabel("Name:");
 	private JTextField putName = new JTextField(TEXT_FIELD_WIDTH);
-//	putName.addActionListener(this);
-//	putName.setActionCommand("Go");
 	private JButton graph = new JButton("Graph");
 	private JButton clear = new JButton("Clear");
 	public void init() {
 		// You fill this in, along with any helper methods //
 		add(label, NORTH);
 		putName.addActionListener(this);
-		putName.setActionCommand("Go");
+		putName.setActionCommand("Graph");
 		add(putName, NORTH);
 		add(graph, NORTH);
 		add(clear, NORTH);
