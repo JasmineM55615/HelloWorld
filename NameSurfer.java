@@ -40,7 +40,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	 */
 	public void actionPerformed(ActionEvent e) {
 		// You fill this in //
-		If(e.getActionCommand.equals("Graph")){
+		if(e.getActionCommand.equals("Graph")){
 			println("You pressed enter or the button");
 		String newStrName = putName.getText();
 		newStrName.toLowerCase();
