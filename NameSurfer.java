@@ -20,16 +20,18 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	 */
 	
 	private JLabel label = new JLabel("Name:");
-	private JTextField putName = new JTextField(TEXT_FIELD_WIDTH);
-	private JButton graph = new JButton("Graph");
+	//private JTextField putName = new JTextField(TEXT_FIELD_WIDTH);
+//	private JButton graph = new JButton("Graph");
 	private JButton clear = new JButton("Clear");
 	
 	public void init() {
 		// You fill this in, along with any helper methods //
 		add(label, NORTH);
+		JTextField putName = new JTextField(TEXT_FIELD_WIDTH);
 		putName.addActionListener(this);
 		putName.setActionCommand("Graph");
 		add(putName, NORTH);
+		JButton graph = new JButton("Graph");
 		add(graph, NORTH);
 		add(clear, NORTH);
 	}
@@ -43,9 +45,9 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		// You fill this in //
 //		if(e.getActionCommand.equals("Go")){
 //			println("You pressed enter or the button");
-		String newStrName = putName.getText();
-		newStrName.toLowerCase();
-		char c = Character.toUpperCase(newStrName.charAt(0));
+//		String newStrName = putName.getText();
+//		newStrName.toLowerCase();
+//		char c = Character.toUpperCase(newStrName.charAt(0));
 		if(e.getActionCommand.equals("Graph")){
 			println("You pressed enter or the button");
 		}
