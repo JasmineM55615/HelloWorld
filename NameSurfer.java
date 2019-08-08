@@ -23,6 +23,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	private JTextField putName = new JTextField(TEXT_FIELD_WIDTH);
 	private JButton graph = new JButton("Graph");
 	private JButton clear = new JButton("Clear");
+	
 	public void init() {
 		// You fill this in, along with any helper methods //
 		add(label, NORTH);
