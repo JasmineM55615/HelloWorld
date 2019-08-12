@@ -23,6 +23,7 @@ public class NameSurferEntry implements NameSurferConstants {
 	 */
 	public NameSurferEntry(String line) {
 		// You fill this in //
+		Scanner input
 	}
 
 	/**
