@@ -28,7 +28,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		// You fill this in, along with any helper methods //
 		add(label, NORTH);
 		putName.addActionListener(this);
-		putName.setActionCommand("Graph");
+		putName.setActionCommand("graph");
 		add(putName, NORTH);
 		add(graph, NORTH);
 		add(clear, NORTH);
@@ -46,7 +46,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		String newStrName = putName.getText();
 		newStrName.toLowerCase();
 		char c = Character.toUpperCase(newStrName.charAt(0));
-		if(e.getActionCommand().equals("Graph")){
+		if(e.getActionCommand().equals("graph")){
 			println("You pressed enter or the button");
 		}
 	//	println(newStrName);
