@@ -56,6 +56,9 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		if(e.getActionCommand().equals("Graph")){
 			println("You pressed enter or the button");
 		}
+		if (e.getActionCommand().equals("Clear")) {
+			println("");
+		}
 	//	println(newStrName);
 	}
 	
