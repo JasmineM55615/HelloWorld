@@ -12,7 +12,7 @@ import java.util.*;
 public class NameSurferEntry implements NameSurferConstants {
 
 	private String name = "";
-	private int[] numbers = new int
+	private int[] numbers = new int[11];
 
 	/**
 	 * Constructor: NameSurferEntry(line)
