@@ -11,7 +11,7 @@ import java.util.*;
 
 public class NameSurferEntry implements NameSurferConstants {
 
-	// TODO: Add instance variables
+	private String 
 
 	/**
 	 * Constructor: NameSurferEntry(line)
