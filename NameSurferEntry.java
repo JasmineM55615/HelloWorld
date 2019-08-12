@@ -26,6 +26,9 @@ public class NameSurferEntry implements NameSurferConstants {
 		// You fill this in //
 		try{
 			Scanner input = new Scanner(new File("names-data.txt"));
+			while(input.hasNext()) {
+				
+			}
 		}
 	}
 
