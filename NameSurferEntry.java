@@ -29,8 +29,12 @@ public class NameSurferEntry implements NameSurferConstants {
 			while(input.hasNext()) {
 				
 			}
+			input.close();
+		}catch(IOException ex) {
+			println("hi");
 		}
 	}
+
 
 	/**
 	 * Public Method: getName()
