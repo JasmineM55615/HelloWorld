@@ -32,6 +32,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		add(putName, NORTH);
 		add(graph, NORTH);
 		add(clear, NORTH);
+		addActionListeners();
 	}
 
 	/**
