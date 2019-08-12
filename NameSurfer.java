@@ -41,9 +41,6 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	 * button actions.
 	 */
 	public void actionPerformed(ActionEvent e) {
-		// You fill this in //
-//		if(e.getActionCommand.equals("Go")){
-//			println("You pressed enter or the button");
 		String newStrName = putName.getText();
 		newStrName.toLowerCase();
 		String newStr = "";
@@ -52,7 +49,6 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		}
 		char c = Character.toUpperCase(newStrName.charAt(0));
 		String newNew = c + newStr;
-		//println("Graph: " + newNew);
 		if(e.getActionCommand().equals("Graph")){
 			println("You pressed enter or the button");
 			println("Graph: " + newNew);
@@ -60,7 +56,6 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		if (e.getActionCommand().equals("Clear")) {
 			println("Clear");
 		}
-	//	println(newStrName);
 	}
 	
 	/**
