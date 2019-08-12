@@ -11,7 +11,8 @@ import java.util.*;
 
 public class NameSurferEntry implements NameSurferConstants {
 
-	private String name = 
+	private String name = "";
+	private int[] numbers = new
 
 	/**
 	 * Constructor: NameSurferEntry(line)
