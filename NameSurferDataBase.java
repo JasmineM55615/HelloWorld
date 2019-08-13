@@ -1,6 +1,9 @@
 /*
  * File: NameSurferDataBase.java
  * -----------------------------
+ * Name: Jasmine Mann
+ * Section Leader: Trey Connelly
+ * 
  * This class keeps track of the complete database of names.
  * The constructor reads in the database from a file, and
  * the only public method makes it possible to look up a
@@ -15,9 +18,8 @@ import java.io.*;
 
 public class NameSurferDataBase implements NameSurferConstants {
 
-	// TODO: Add instance variables
-	private List<NameSurferEntry> babyNames; //DO YOU NEED TO PUT PRIVATE? AND ARE THERE ANY OTHER PRIVATE VARIABLES
 
+	private List<NameSurferEntry> babyNames; 
 	/**
 	 * Constructor: NameSurferDataBase(filename)
 	 * Creates a new NameSurferDataBase and initializes it using the
@@ -26,10 +28,9 @@ public class NameSurferDataBase implements NameSurferConstants {
 	 * occurs as the file is being read.
 	 */
 	public NameSurferDataBase(String filename) {
-		// You fill this in //
 		babyNames = new ArrayList<NameSurferEntry>();
 		try{
-			Scanner input = new Scanner(new File(filename));
+			Scanner input = new Scanner(new File(filename)); //reads the filename and stores all the babyname data
 			while(input.hasNextLine()) {
 				String yote = input.nextLine();
 				NameSurferEntry t = new NameSurferEntry(yote);
@@ -39,7 +40,6 @@ public class NameSurferDataBase implements NameSurferConstants {
 		} catch(IOException ex) {
 			System.out.println("hi");
 		}
-		//ArrayList<String> babyNames = new ArrayList<String>();
 	}
 
 	/**
@@ -49,11 +49,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 	 * method returns null.
 	 */
 	public NameSurferEntry findEntry(String name) {
-		// You need to turn this stub into a real implementation //
-//		if(!babyNames.contains(name)) {
-//			return null;
-//		}
-		for(NameSurferEntry i : babyNames) {
+		for(NameSurferEntry i : babyNames) { //goes through the array and returns the name surfer entry if the name inputted by the user is a valid name
 			if(i.getName().equals(name)) {
 				return i;
 			}
