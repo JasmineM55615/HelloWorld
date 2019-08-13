@@ -53,7 +53,7 @@ public class NameSurferEntry implements NameSurferConstants {
 	 * not appear in a decade, the rank value is 0.
 	 */
 	public int getRank(int decade) {
-		if(decade < 0 || decade > (NDECADES - 1)) {
+		if(decade < 0 || decade > (NDECADES - 1)) { //if decade is smaller than 0 or bigger than the number of decades minus 1, it returns -1
 			return -1;
 		}
 		return numbers[decade];
