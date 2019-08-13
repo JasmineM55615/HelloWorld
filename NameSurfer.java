@@ -101,16 +101,17 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		double yPointTwo = getHeight() - GRAPH_MARGIN_SIZE;
 		for(int i = 0; i < inputs.size(); i++) {
 			for(int j = 0; j < NDECADES; j++) {
-				int mathY = inputs.get(i + 1).getRank(j);
-				yPointOne = mathY / (getHeight() - (GRAPH_MARGIN_SIZE * 2)) * 100;
-				int mathYTwo = inputs.get(i).getRank(j);
-				if(mathY == 0) {
+				int numOfName = inputs.get(i).getRank(j);
+				yPointOne = numOfName / (getHeight() - (GRAPH_MARGIN_SIZE * 2)) * 100;
+				int mathYTwo = inputs.get(i + 1).getRank(j);
+				if(numOfName == 0) {
 					String nameStr = "" + inputs.get(i).getName() + "*";
 					GLabel nameLabel = new GLabel(nameStr);
 					add(nameLabel, i * GRAPH_MARGIN_SIZE, getHeight() - GRAPH_MARGIN_SIZE);
 				}else {
-					GLabel nameLabel = new GLabel("" + inputs.get(i).getName() + );
+					GLabel nameLabel = new GLabel("" + inputs.get(i).getName() + " " + numOfName);
 					yPointTwo = mathYTwo / (getHeight() - (GRAPH_MARGIN_SIZE * 2)) * 100;
+					add(nameLabel, i * GRAPH_MARGIN_SIZE, getHeight() - GRAPH_MARGIN_SIZE);
 				}
 				GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
 				yPointOne = yPointTwo;
