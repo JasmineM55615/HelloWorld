@@ -52,6 +52,9 @@ public class NameSurferDataBase implements NameSurferConstants {
 		if(!babyNames.contains(name)) {
 			return null;
 		}
+		for(int i = 0; i < babyNames.length(); i++) {
+			
+		}
 		return babyNames.get(babyNames.indexOf());
 	}
 }
