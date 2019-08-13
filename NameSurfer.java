@@ -160,10 +160,11 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 			int newcounter = count%4;
 			Color col = colors[newcounter];
 			count+=1;
+			NameSurferEntry t = inputs.get(i);
 			for(int j = 0; j < NDECADES; j++) {
-				double numOfName = inputs.get(i).getRank(j);
-				String theName = inputs.get(i).getName();
-				double mathYTwo = inputs.get(i).getRank(j+1);
+				double numOfName = t.getRank(j);
+				String theName = t.getName();
+				double mathYTwo = t.getRank(j+1);
 				if(numOfName == 0 || numOfName == 1000) {
 					String nameStr = "" + theName + " *";
 					GLabel nameLabel = new GLabel(nameStr);
