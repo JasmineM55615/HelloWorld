@@ -74,5 +74,6 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 */
 	private void redraw() {
 		// You fill this in //
+		
 	}
 }
