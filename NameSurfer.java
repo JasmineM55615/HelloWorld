@@ -143,4 +143,4 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		// for colors, mod 4
 
 	}
-}
+
