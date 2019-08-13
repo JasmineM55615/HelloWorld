@@ -28,15 +28,15 @@ public class NameSurferDataBase implements NameSurferConstants {
 		// You fill this in //
 		String str = "";
 		try{
-		Scanner input = new Scanner(new File("names-data.txt"));
-		while(input.hasNext()) {
-			str += input.next();
+			Scanner input = new Scanner(new File("names-data.txt"));
+			while(input.hasNext()) {
+				str += input.next();
+			}
+			input.close();
+		} catch(IOException ex) {
+			//System.out.println("hi");
 		}
-		input.close();
-	}catch(IOException ex) {
-		println("hi");
 	}
-}
 
 	/**
 	 * Public Method: findEntry(name)
