@@ -16,7 +16,7 @@ import java.io.*;
 public class NameSurferDataBase implements NameSurferConstants {
 
 	// TODO: Add instance variables
-	
+
 	/**
 	 * Constructor: NameSurferDataBase(filename)
 	 * Creates a new NameSurferDataBase and initializes it using the
@@ -27,7 +27,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 	List<NameSurferEntry> babyNames;
 	public NameSurferDataBase(String filename) {
 		// You fill this in //
-	//	babyNames = new ArrayList<NameSurferEntry>();
+		//	babyNames = new ArrayList<NameSurferEntry>();
 		try{
 			Scanner input = new Scanner(new File("names-data.txt"));
 			while(input.hasNext()) {
@@ -49,14 +49,15 @@ public class NameSurferDataBase implements NameSurferConstants {
 	 */
 	public NameSurferEntry findEntry(String name) {
 		// You need to turn this stub into a real implementation //
-		if(!babyNames.contains(name)) {
-			return null;
-		}
+//		if(!babyNames.contains(name)) {
+//			return null;
+//		}
 		for(NameSurferEntry i : babyNames) {
-			if(!babyNames.contains(name)) {
-				return babyNames(i);
+			if(i.getName().equals(name)) {
+				return i;
+			}
 		}
-		return babyNames.get(babyNames.indexOf());
+		return null;
 	}
 }
 
