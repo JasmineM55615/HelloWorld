@@ -72,7 +72,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 * entire display and repaints it. Consider calling it when you change
 	 * anything about the display.
 	 */
-	private ArrayList<String> inputs = new ArrayList<String>();
+	private ArrayList<NameSurferEntry> inputs = new ArrayList<NameSurferEntry>();
 	private void redraw() {
 		// You fill this in //
 		int XSpace = 0;
@@ -95,7 +95,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		}
 		//for loop for drawing the lines 
 		//
-		for(int i = 0; i < numbers.getRank()) {
+		for(int i = 0; i < inputs.getRank(i); i++) {
 			
 		}
 		//forloop for lines (- 1)
