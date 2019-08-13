@@ -85,12 +85,13 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		GLine otherLineTwo = new GLine(0, getHeight() - GRAPH_MARGIN_SIZE, getWidth(), getHeight() - GRAPH_MARGIN_SIZE);
 		add(otherLineTwo);
 		int decade = 1900;
-		//int decadeSpace = 0
+		int decadeSpace = 0;
 		for(int i = 0; i < NDECADES; i++) {
 			GLabel decadeDisplay = new GLabel("" + decade);
 			decade+= 10;
-			add(decadeDisplay, 0, getHeight() - DECADE_LABEL_MARGIN_SIZE);
+			add(decadeDisplay, decadeSpace, getHeight() - DECADE_LABEL_MARGIN_SIZE);
 			XSpace += getWidth() / NDECADES;
+			decadeSpace += getWidth() / NDECADES;
 		}
 	}
 }
