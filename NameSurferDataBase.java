@@ -36,6 +36,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 		} catch(IOException ex) {
 			//System.out.println("hi");
 		}
+		ArrayList<String> babyNames = new ArrayList<String>();
 	}
 
 	/**
