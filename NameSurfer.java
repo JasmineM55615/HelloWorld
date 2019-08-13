@@ -43,6 +43,8 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 * This class is responsible for detecting when the buttons are
 	 * clicked, so you will have to define a method to respond to
 	 * button actions.
+	 * 
+	 * 
 	 */
 
 	private Color[] colors = {Color.BLACK, Color.RED, Color.BLUE, Color.MAGENTA};
