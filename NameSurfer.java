@@ -1,8 +1,17 @@
 /*
  * File: NameSurfer.java
  * ---------------------
+ * Name: Jasmine Mann
+ * Section Leader: Trey Connelly
+ * 
  * When it is finished, this program will implements the viewer for
  * the baby-name database described in the assignment handout.
+ * 
+ * This program gets the user imput of the user and checks of that
+ * baby name is is the file containing all the baby names. If it is, 
+ * it graphs the popularity of the baby name through the decades from
+ * 1900 to 2000 in different colors each time through four color. 
+ * A clear button is created to clear the data from graph
  */
 
 import acm.graphics.*;
@@ -162,7 +171,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		double yPointTwo = getHeight() - GRAPH_MARGIN_SIZE;
 		int count = 0;
 		for(int i = 0; i < inputs.size(); i++) {
-			int newcounter = count % 4;
+			int newcounter = count % 4; //takes the counter variable mod 4 to rotate the color of the graph using four color
 			Color col = colors[newcounter];
 			count += 1;
 			NameSurferEntry t = inputs.get(i);
