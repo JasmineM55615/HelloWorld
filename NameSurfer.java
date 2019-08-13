@@ -84,6 +84,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 						yPointOne = getHeight()-GRAPH_MARGIN_SIZE;
 					}else {
 						GLabel nameLabel = new GLabel("" + theName + " " + ((int) numOfName));
+						nameLabel.setColor(col);
 						yPointOne = (numOfName / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE;
 						add(nameLabel, xPointOne, yPointOne);
 					}
@@ -168,6 +169,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 					yPointOne = getHeight()-GRAPH_MARGIN_SIZE;
 				}else {
 					GLabel nameLabel = new GLabel("" + theName + " " + ((int) numOfName));
+					nameLabel.setColor(col);
 					yPointOne = (numOfName / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE;
 					add(nameLabel, xPointOne, yPointOne);
 				}
