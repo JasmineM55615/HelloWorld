@@ -49,6 +49,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 	 */
 	public NameSurferEntry findEntry(String name) {
 		// You need to turn this stub into a real implementation //
+		
 		return null;
 	}
 }
