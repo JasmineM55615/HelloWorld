@@ -27,20 +27,8 @@ public class NameSurferEntry implements NameSurferConstants {
 		name = temp[0];
 		for(int i = 1; i < temp.length; i++) {
 			numbers[i - 1] = Integer.parseInt(temp[i]); //changes the numbers into integers
-			//integer.parcent
 		}
-		// You fill this in //
-//		try{
-//			Scanner input = new Scanner(new File("names-data.txt"));
-//			while(input.hasNext()) {
-//				
-//			}
-//			input.close();
-//		}catch(IOException ex) {
-//			println("hi");
-//		}
 	}
-
 
 	/**
 	 * Public Method: getName()
@@ -72,13 +60,11 @@ public class NameSurferEntry implements NameSurferConstants {
 	 * NameSurferEntry.
 	 */
 	public String toString() {
-		// You need to turn this stub into a real implementation //
 		String str = name + " [";
 		for(int i = 0; i < NDECADES; i ++) {
 			str += numbers[i] + ", ";
 		}
 		str = (str.substring(0, str.length() - 2)) + "]";
-		//substring last two characters ", " and remove 
 		return str;
 	}
 }
