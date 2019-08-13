@@ -109,6 +109,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		if (e.getActionCommand().equals("Clear")) {
 			//println("Clear");
 			inputs.clear();
+			counter = 0;
 			redraw();
 		}
 	}
