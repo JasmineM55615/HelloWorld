@@ -12,7 +12,7 @@ import javax.swing.*;
 import java.util.*;
 import acm.util.*;
 
-public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
+public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 
 	/**
 	 * This method has the responsibility for reading in the data base
@@ -50,11 +50,12 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		char c = Character.toUpperCase(newStrName.charAt(0));
 		String newNew = c + newStr;
 		if(e.getActionCommand().equals("Graph")){
-			println("You pressed enter or the button");
-			println("Graph: " + newNew);
+			//println("You pressed enter or the button");
+			//println("Graph: " + newNew);
 		}
 		if (e.getActionCommand().equals("Clear")) {
-			println("Clear");
+			//println("Clear");
+			
 		}
 	}
 	
