@@ -18,12 +18,12 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 * This method has the responsibility for reading in the data base
 	 * and initializing the interactors at the top of the window.
 	 */
-	
+
 	private JLabel label = new JLabel("Name:");
 	private JTextField putName = new JTextField(TEXT_FIELD_WIDTH);
 	private JButton graph = new JButton("Graph");
 	private JButton clear = new JButton("Clear");
-	
+
 	public void init() {
 		// You fill this in, along with any helper methods //
 		add(label, NORTH);
@@ -45,7 +45,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		newStrName.toLowerCase();
 		String newStr = "";
 		for(int i = 1; i < newStrName.length(); i++) {
-				newStr += newStrName.charAt(i);
+			newStr += newStrName.charAt(i);
 		}
 		char c = Character.toUpperCase(newStrName.charAt(0));
 		String newNew = c + newStr;
@@ -55,10 +55,10 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		}
 		if (e.getActionCommand().equals("Clear")) {
 			//println("Clear");
-			
+
 		}
 	}
-	
+
 	/**
 	 * This class is responsible for detecting when the the canvas
 	 * is resized. This method is called on each resize!
@@ -66,7 +66,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	public void componentResized(ComponentEvent e) { 
 		redraw();
 	}
-	
+
 	/**
 	 * A helper method that we *strongly* recommend. Redraw clears the
 	 * entire display and repaints it. Consider calling it when you change
@@ -109,8 +109,9 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 					GLabel nameLabel = new GLabel(nameStr);
 					add(nameLabel, i * GRAPH_MARGIN_SIZE, getHeight() - GRAPH_MARGIN_SIZE);
 				}else {
-				yPointTwo = mathYTwo / (getHeight() - (GRAPH_MARGIN_SIZE * 2)) * 100;
-			}
+					GLabel nameLabel = new GLabel("" + inputs.get(i).getName());
+					yPointTwo = mathYTwo / (getHeight() - (GRAPH_MARGIN_SIZE * 2)) * 100;
+				}
 				GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
 				yPointOne = yPointTwo;
 			}
@@ -129,5 +130,5 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		//for loop for label(just line)
 		// for colors, mod 4
 
-}
+	}
 }
