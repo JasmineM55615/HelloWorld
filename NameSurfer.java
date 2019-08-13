@@ -76,8 +76,8 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 				for(int j = 0; j < NDECADES; j++) {
 					double numOfName = t.getRank(j);
 					String theName = t.getName();
-					double mathYTwo = t.getRank(j+1); //gets the y coordinate of the s
-					if(numOfName == 0) { //
+					double mathYTwo = t.getRank(j+1); //gets the y coordinate of the end of the line going to be drawn by finding the y coordinate of the beginning of the next line
+					if(numOfName == 0) { //if the number for a decade is 0, 
 						String nameStr = "" + theName + " *";
 						GLabel nameLabel = new GLabel(nameStr);
 						nameLabel.setColor(col);
