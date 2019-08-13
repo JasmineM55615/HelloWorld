@@ -74,6 +74,9 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 */
 	private void redraw() {
 		// You fill this in //
+		for(int i = 0; i < NDECADES; i++) {
+			
+		}
 		GLine line = new GLine(0, 0, 0, getHeight());
 		add(line);
 	}
