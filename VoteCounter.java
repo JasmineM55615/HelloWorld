@@ -3,6 +3,7 @@
  * ---------------------
  * Name: Jasmine Mann
  * Section Leader: Trey Connelly
+ * 
  * A sandcastle program that uses collections to tally votes.
  * It checks how many time each student has been voted for
  * and prints out the studnet's name with the number of votes
