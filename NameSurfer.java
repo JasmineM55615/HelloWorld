@@ -187,6 +187,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 					lineOnGraph.setColor(col);
 					add(lineOnGraph);
 				}
+				System.out.println(count);
 				xPointOne = xPointTwo;
 				yPointOne = yPointTwo;
 				xPointTwo += getWidth()/NDECADES;
