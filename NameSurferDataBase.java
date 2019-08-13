@@ -27,7 +27,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 	List<NameSurferEntry> babyNames;
 	public NameSurferDataBase(String filename) {
 		// You fill this in //
-		babyNames = new ArrayList<NameSurferEntry>();
+	//	babyNames = new ArrayList<NameSurferEntry>();
 		try{
 			Scanner input = new Scanner(new File("names-data.txt"));
 			while(input.hasNext()) {
