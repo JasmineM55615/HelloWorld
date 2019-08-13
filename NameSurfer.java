@@ -53,7 +53,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		String newStrName = putName.getText();
 		newStrName.toLowerCase();
 		String newStr = "";
-		for(int i = 0; i < newStrName.length(); i++) {
+		for(int i = 1; i < newStrName.length(); i++) {
 			newStr += newStrName.charAt(i);
 		}
 		char c = Character.toUpperCase(newStrName.charAt(0));
