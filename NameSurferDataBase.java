@@ -26,17 +26,19 @@ public class NameSurferDataBase implements NameSurferConstants {
 	 */
 	public NameSurferDataBase(String filename) {
 		// You fill this in //
+		ArrayList<String> babyNames = new ArrayList<String>();
 		String str = "";
 		try{
 			Scanner input = new Scanner(new File("names-data.txt"));
 			while(input.hasNext()) {
 				str += input.nextLine();
+				babyNames.add(str);
 			}
 			input.close();
 		} catch(IOException ex) {
 			//System.out.println("hi");
 		}
-		ArrayList<String> babyNames = new ArrayList<String>();
+		//ArrayList<String> babyNames = new ArrayList<String>();
 	}
 
 	/**
