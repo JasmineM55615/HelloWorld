@@ -24,7 +24,7 @@ public class NameSurferEntry implements NameSurferConstants {
 	
 	public NameSurferEntry(String line) {
 		String[] temp = line.split(" ");
-		temp[0] = 
+		name = temp[0];
 		// You fill this in //
 //		try{
 //			Scanner input = new Scanner(new File("names-data.txt"));
