@@ -32,7 +32,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 			Scanner input = new Scanner(new File("names-data.txt"));
 			while(input.hasNext()) {
 				String yote = input.nextLine();
-				babyNames.add(str);
+				babyNames.add(yote);
 			}
 			input.close();
 		} catch(IOException ex) {
