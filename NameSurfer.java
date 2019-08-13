@@ -61,7 +61,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		if(e.getActionCommand().equals("Graph")){
 			redraw();
 
-			if(newNew != null) {
+			if(database.findEntry(newNew) != null) {
 				int newcounter = counter%4;
 				Color col = colors[newcounter];
 				counter+=1;
