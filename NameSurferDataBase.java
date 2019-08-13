@@ -26,6 +26,16 @@ public class NameSurferDataBase implements NameSurferConstants {
 	 */
 	public NameSurferDataBase(String filename) {
 		// You fill this in //
+		try{
+		Scanner input = new Scanner(new File("names-data.txt"));
+		while(input.hasNext()) {
+			
+		}
+		input.close();
+	}catch(IOException ex) {
+		println("hi");
+	}
+}
 	}
 
 	/**
