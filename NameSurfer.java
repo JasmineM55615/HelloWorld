@@ -92,5 +92,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 			add(decadeDisplay, decadeSpace, getHeight() - DECADE_LABEL_MARGIN_SIZE);
 			decadeSpace += getWidth() / NDECADES;
 		}
+		//for loop for drawing the lines 
+		//
 	}
 }
