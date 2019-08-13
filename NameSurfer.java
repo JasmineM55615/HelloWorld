@@ -96,7 +96,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		//for loop for drawing the lines 
 		//
 		for(int i = 0; i < inputs.size(); i++) {
-			intinputs.getRank(i);
+			int YOneinputs.getRank(i);
 		}
 		//forloop for lines (- 1)
 		//for loop for label(just line)
