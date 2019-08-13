@@ -109,7 +109,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 				if(theName == null) {
 					break;
 				}else
-				yPointOne = numOfName / (getHeight() - (GRAPH_MARGIN_SIZE * 2)) * 100;
+					yPointOne = numOfName / (getHeight() - (GRAPH_MARGIN_SIZE * 2)) * 100;
 				int mathYTwo = inputs.get(i + 1).getRank(j);
 				if(numOfName == 0) {
 					String nameStr = "" + theName + "*";
@@ -121,28 +121,28 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 					add(nameLabel, xPointOne, yPointOne);
 				}
 			}
-				GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
-				add(lineOnGraph);
-				System.out.println("hi");
-				xPointOne = xPointTwo;
-				yPointOne = yPointTwo;
-				xPointOne += GRAPH_MARGIN_SIZE;
-			}
+			GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
+			add(lineOnGraph);
+			System.out.println("hi");
+			xPointOne = xPointTwo;
+			yPointOne = yPointTwo;
+			xPointOne += GRAPH_MARGIN_SIZE;
 		}
-//		for(int i = 0; i < inputs.size(); i++) {
-//			for(int j = 0; j < NDECADES; j++) {
-//				int YOne = inputs.get(i).getRank(j);
-//				if(YOne == 0) {
-//					String nameLabel = "" + inputs.get(i).getName() + "*";
-//				}else {
-//					nameLabel = 
-//				}
-//			}
-//		}
-		//TO DO
-		//forloop for lines (- 1)
-		//for loop for label(just line)
-		// for colors, mod 4
-
 	}
+	//		for(int i = 0; i < inputs.size(); i++) {
+	//			for(int j = 0; j < NDECADES; j++) {
+	//				int YOne = inputs.get(i).getRank(j);
+	//				if(YOne == 0) {
+	//					String nameLabel = "" + inputs.get(i).getName() + "*";
+	//				}else {
+	//					nameLabel = 
+	//				}
+	//			}
+	//		}
+	//TO DO
+	//forloop for lines (- 1)
+	//for loop for label(just line)
+	// for colors, mod 4
+
+}
 
