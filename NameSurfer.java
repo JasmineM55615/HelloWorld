@@ -83,15 +83,15 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 						nameLabel.setColor(col);
 						add(nameLabel, xPointOne, getHeight() - GRAPH_MARGIN_SIZE);
 						yPointOne = getHeight() - GRAPH_MARGIN_SIZE;
-					}else {
+					}else { //if the number is not 0, it was display the name and the number beside it representing that decade
 						GLabel nameLabel = new GLabel("" + theName + " " + ((int) numOfName));
 						nameLabel.setColor(col);
-						yPointOne = (numOfName / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE;
+						yPointOne = (numOfName / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE; //finds the point of the first y coordinate using the number of the decade
 						add(nameLabel, xPointOne, yPointOne);
 					}
-					if(mathYTwo == 0) {
+					if(mathYTwo == 0) { //places the label on the margin from the height of the canvas if it has a number that is equal to zero
 						yPointTwo = getHeight() - GRAPH_MARGIN_SIZE;
-					} else {
+					} else { //places the label on the according 
 						yPointTwo = (mathYTwo / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE;
 					}
 					if(yPointTwo > GRAPH_MARGIN_SIZE) {
