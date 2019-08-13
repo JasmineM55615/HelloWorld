@@ -73,7 +73,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 				double yPointOne = getHeight() - GRAPH_MARGIN_SIZE;
 				double xPointTwo = getWidth() / NDECADES;
 				double yPointTwo = getHeight() - GRAPH_MARGIN_SIZE;
-				for(int j = 0; j < NDECADES; j++) {
+				for(int j = 0; j < NDECADES; j++) { //goes through each number representing each decade
 					double numOfName = t.getRank(j);
 					String theName = t.getName();
 					double mathYTwo = t.getRank(j+1); //gets the y coordinate of the end of the line going to be drawn by finding the y coordinate of the beginning of the next line
