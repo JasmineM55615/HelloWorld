@@ -150,7 +150,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		add(otherLineTwo);
 		int decade = 1900;
 		int decadeSpace = 0;
-		for(int i = 0; i < NDECADES; i++) {
+		for(int i = 0; i < NDECADES; i++) { //goes through each number representing each decade
 			GLabel decadeDisplay = new GLabel("" + decade);
 			decade+= 10;
 			add(decadeDisplay, decadeSpace, getHeight() - DECADE_LABEL_MARGIN_SIZE);
@@ -168,17 +168,17 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 			NameSurferEntry t = inputs.get(i);
 			xPointOne = 0;
 			xPointTwo = getWidth() / NDECADES;
-			for(int j = 0; j < NDECADES; j++) {
+			for(int j = 0; j < NDECADES; j++) { //goes through each number representing each decade
 				double numOfName = t.getRank(j);
 				String theName = t.getName();
 				double mathYTwo = t.getRank(j+1);
-				if(numOfName == 0) {
+				if(numOfName == 0) { //if the number for a decade is 0, it was display the name and an astrix besides it
 					String nameStr = "" + theName + " *";
 					GLabel nameLabel = new GLabel(nameStr);
 					nameLabel.setColor(col);
 					add(nameLabel, xPointOne, getHeight() - GRAPH_MARGIN_SIZE);
 					yPointOne = getHeight()-GRAPH_MARGIN_SIZE;
-				}else {
+				}else { //if the number is not 0, it was display the name and the number beside it representing that decade
 					GLabel nameLabel = new GLabel("" + theName + " " + ((int) numOfName));
 					nameLabel.setColor(col); //sets the label to the color chosen from the four colors
 					yPointOne = (numOfName / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE; //finds the point of the first y coordinate using the number of the decade
@@ -194,9 +194,9 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 					lineOnGraph.setColor(col); //sets the color of the label depending on the variable counter
 					add(lineOnGraph);
 				}
-				xPointOne = xPointTwo;
-				yPointOne = yPointTwo;
-				xPointTwo += getWidth()/NDECADES;
+				xPointOne = xPointTwo; //makes the beginning of the x coordinate of the line the x coordinate of the end of the second line
+				yPointOne = yPointTwo; //makes the beginning of the y coordinate of the line the y coordinate of the end of the second line
+				xPointTwo += getWidth() / NDECADES;
 			}
 		}
 	}
