@@ -99,8 +99,8 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 			for(int j = 0; j < NDECADES; j++) {
 				int YOne = inputs.get(i).getRank(j);
 				if(YOne == 0 || YOne == 1000) {
-					String nameLabel = ""
-				}
+					String nameLabel = "" + inputs.get(i).getName() + "*";
+				}else if()
 			}
 		}
 		//forloop for lines (- 1)
