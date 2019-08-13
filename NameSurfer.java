@@ -76,7 +76,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 				for(int j = 0; j < NDECADES; j++) {
 					double numOfName = t.getRank(j);
 					String theName = t.getName();
-					double mathYTwo = t.getRank(j+1);
+					double mathYTwo = t.getRank(j+1); //gets the y coordinate of the s
 					if(numOfName == 0) { //
 						String nameStr = "" + theName + " *";
 						GLabel nameLabel = new GLabel(nameStr);
