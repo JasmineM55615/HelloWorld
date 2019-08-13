@@ -51,8 +51,8 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		String newNew = c + newStr;
 		if(e.getActionCommand().equalsIgnoreCase("Graph")){
 			redraw();
-			//println("You pressed enter or the button");
-			//println("Graph: " + newNew);
+			println("You pressed enter or the button");
+			println("Graph: " + newNew);
 		}
 		if (e.getActionCommand().equals("Clear")) {
 			//println("Clear");
