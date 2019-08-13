@@ -33,7 +33,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 			while(input.hasNext()) {
 				//String yote = input.nextLine();
 				str += input.nextLine();
-				babyNames.add(new NameSurferEntry(str));
+				babyNames.add(new NameSurferEntry(line));
 			}
 			input.close();
 		} catch(IOException ex) {
