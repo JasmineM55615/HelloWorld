@@ -128,6 +128,9 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 */
 	private void redraw() {
 		// You fill this in //
+		removeAll();
+		
+		
 		int XSpace = 0;
 		for(int i = 0; i < NDECADES; i++) {
 			GLine line = new GLine(XSpace, 0, XSpace, getHeight());
