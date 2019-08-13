@@ -28,7 +28,6 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	private NameSurferDataBase database;
 
 	public void init() {
-		// You fill this in, along with any helper methods //
 		database = new NameSurferDataBase("names-data.txt");
 		add(label, NORTH);
 		putName.addActionListener(this);
@@ -45,7 +44,6 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 * button actions.
 	 */
 	private ArrayList<NameSurferEntry> inputs = new ArrayList<NameSurferEntry>();
-	
 	private Color[] colors = {Color.BLACK, Color.RED, Color.BLUE, Color.MAGENTA};
 	private int counter = 0;
 	
@@ -58,10 +56,8 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		}
 		char c = Character.toUpperCase(lowerCase.charAt(0));
 		String newNew = c + newStr;
-		System.out.println(newNew);
 		if(e.getActionCommand().equals("Graph")){
 			redraw();
-
 			if(database.findEntry(newNew) != null) {
 				int newcounter = counter%4;
 				Color col = colors[newcounter];
@@ -72,7 +68,6 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 				double yPointOne = getHeight() - GRAPH_MARGIN_SIZE;
 				double xPointTwo = getWidth()/NDECADES;
 				double yPointTwo = getHeight() - GRAPH_MARGIN_SIZE;
-				
 				for(int j = 0; j < NDECADES; j++) {
 					double numOfName = t.getRank(j);
 					String theName = t.getName();
@@ -103,12 +98,9 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 					yPointOne = yPointTwo;
 					xPointTwo += getWidth()/NDECADES;
 				}
-				//println("You pressed enter or the button");
-				//println("Graph: " + newNew);
 			}
 		}
 		if (e.getActionCommand().equals("Clear")) {
-			//println("Clear");
 			inputs.clear();
 			counter = 0;
 			redraw();
@@ -129,15 +121,12 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 * anything about the display.
 	 */
 	private void redraw() {
-		// You fill this in //
 		removeAll();
-		
 		int XSpace = 0;
 		for(int i = 0; i < NDECADES; i++) {
 			GLine line = new GLine(XSpace, 0, XSpace, getHeight());
 			XSpace += getWidth() / NDECADES;
 			add(line);
-			//System.out.println("hi");
 		}
 		GLine otherLineOne = new GLine(0, GRAPH_MARGIN_SIZE, getWidth(), GRAPH_MARGIN_SIZE);
 		add(otherLineOne);
@@ -151,8 +140,6 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 			add(decadeDisplay, decadeSpace, getHeight() - DECADE_LABEL_MARGIN_SIZE);
 			decadeSpace += getWidth() / NDECADES;
 		}
-		//for loop for drawing the lines 
-		//double xPointOne = 0;
 		double xPointOne = 0;
 		double yPointOne = getHeight() - GRAPH_MARGIN_SIZE;
 		double xPointTwo = getWidth()/NDECADES;
@@ -197,20 +184,4 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 			}
 		}
 	}
-	//		for(int i = 0; i < inputs.size(); i++) {
-	//			for(int j = 0; j < NDECADES; j++) {
-	//				int YOne = inputs.get(i).getRank(j);
-	//				if(YOne == 0) {
-	//					String nameLabel = "" + inputs.get(i).getName() + "*";
-	//				}else {
-	//					nameLabel = 
-	//				}
-	//			}
-	//		}
-	//TO DO
-	//forloop for lines (- 1)
-	//for loop for label(just line)
-	// for colors, mod 4
-
 }
-
