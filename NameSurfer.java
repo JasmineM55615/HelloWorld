@@ -85,7 +85,6 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 				xPointOne = xPointTwo;
 				yPointOne = yPointTwo;
 				xPointOne += GRAPH_MARGIN_SIZE;
-			}
 			//println("You pressed enter or the button");
 			//println("Graph: " + newNew);
 		}
