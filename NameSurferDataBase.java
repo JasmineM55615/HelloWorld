@@ -52,7 +52,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 		if(!babyNames.contains(name)) {
 			return null;
 		}
-		return NameSurferEntry(name);
+		return babyNames.get(babyNames.indexOf());
 	}
 }
 
