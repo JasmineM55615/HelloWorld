@@ -74,6 +74,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 */
 	private void redraw() {
 		// You fill this in //
-		GLine line = new GLine((0,0), (0, get.Height()))
+		GLine line = new GLine(0, 0, 0, getHeight());
+		add(line);
 	}
 }
