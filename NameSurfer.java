@@ -164,7 +164,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 			add(lineOnGraph);
 			xPointOne = xPointTwo;
 			yPointOne = yPointTwo;
-			xPointOne += GRAPH_MARGIN_SIZE;
+			xPointTwo += GRAPH_MARGIN_SIZE;
 		}
 	}
 	//		for(int i = 0; i < inputs.size(); i++) {
