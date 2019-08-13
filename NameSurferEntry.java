@@ -47,8 +47,7 @@ public class NameSurferEntry implements NameSurferConstants {
 	 * Returns the name associated with this entry.
 	 */
 	public String getName() {
-		// You need to turn this stub into a real implementation //
-		return null;
+		return name;
 	}
 
 	/**
