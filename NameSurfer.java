@@ -134,38 +134,37 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 			decadeSpace += getWidth() / NDECADES;
 		}
 		//for loop for drawing the lines 
-		//
+		//double xPointOne = 0;
 		double xPointOne = 0;
 		double yPointOne = getHeight() - GRAPH_MARGIN_SIZE;
-		double xPointTwo = GRAPH_MARGIN_SIZE;
+		double xPointTwo = getWidth()/NDECADES;
 		double yPointTwo = getHeight() - GRAPH_MARGIN_SIZE;
-		
 		for(int i = 0; i < inputs.size(); i++) {
 			for(int j = 0; j < NDECADES; j++) {
-				System.out.println("yuh");
-				int numOfName = inputs.get(i).getRank(j);
+				double numOfName = inputs.get(i).getRank(j);
 				String theName = inputs.get(i).getName();
-				if(theName == null) {
-					break;
-				}else
-					yPointOne = numOfName / (getHeight() - (GRAPH_MARGIN_SIZE * 2)) * 100;
-				int mathYTwo = inputs.get(i + 1).getRank(j);
-				if(numOfName == 0) {
-					String nameStr = "" + theName + "*";
+				double mathYTwo = inputs.get(i).getRank(j+1);
+				if(numOfName == 0 || numOfName == 1000) {
+					String nameStr = "" + theName + " *";
 					GLabel nameLabel = new GLabel(nameStr);
 					add(nameLabel, xPointOne, getHeight() - GRAPH_MARGIN_SIZE);
+					yPointOne = getHeight()-GRAPH_MARGIN_SIZE;
 				}else {
-					GLabel nameLabel = new GLabel("" + theName + " " + numOfName);
-					yPointTwo = mathYTwo / (getHeight() - (GRAPH_MARGIN_SIZE * 2)) * 100;
+					GLabel nameLabel = new GLabel("" + theName + " " + ((int) numOfName));
+					yPointOne = (numOfName / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE;
 					add(nameLabel, xPointOne, yPointOne);
 				}
-				
+				if(mathYTwo == 0 || mathYTwo == 1000) {
+					yPointTwo = getHeight()-GRAPH_MARGIN_SIZE;
+				} else {
+					yPointTwo = (mathYTwo / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE;
+				}
+				GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
+				add(lineOnGraph);
+				xPointOne = xPointTwo;
+				yPointOne = yPointTwo;
+				xPointTwo += getWidth()/NDECADES;
 			}
-			GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
-			add(lineOnGraph);
-			xPointOne = xPointTwo;
-			yPointOne = yPointTwo;
-			xPointTwo += GRAPH_MARGIN_SIZE;
 		}
 	}
 	//		for(int i = 0; i < inputs.size(); i++) {
