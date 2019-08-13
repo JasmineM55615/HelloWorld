@@ -83,7 +83,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 					} else {
 						yPointTwo = (mathYTwo / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE;
 					}
-					if(yPointTwo >= 20) {
+					if(yPointTwo > 20) {
 						GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
 						add(lineOnGraph);
 					}
