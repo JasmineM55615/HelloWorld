@@ -105,10 +105,11 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		int numOfName = 0;
 		String theName = "";
 		
-		System.out.println("hellooooo");
+		
 		
 		for(int i = 0; i < inputs.size(); i++) {
 			for(int j = 0; j < NDECADES; j++) {
+				System.out.println("hellooooo");
 				numOfName = inputs.get(i).getRank(j);
 				theName = inputs.get(i).getName();
 				if(theName == null) {
