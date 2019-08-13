@@ -94,7 +94,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 			decade+= 10;
 			add(decadeDisplay, decadeSpace, getHeight() - DECADE_LABEL_MARGIN_SIZE);
 			decadeSpace += getWidth() / NDECADES;
-			System.out.println("hi");
+			System.out.println("hiiiii");
 		}
 		//for loop for drawing the lines 
 		//
