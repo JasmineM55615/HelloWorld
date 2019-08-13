@@ -161,6 +161,8 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 			Color col = colors[newcounter];
 			count+=1;
 			NameSurferEntry t = inputs.get(i);
+			xPointOne = 0;
+			xPointTwo = getWidth()/NDECADES;
 			for(int j = 0; j < NDECADES; j++) {
 				double numOfName = t.getRank(j);
 				String theName = t.getName();
@@ -187,7 +189,6 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 					lineOnGraph.setColor(col);
 					add(lineOnGraph);
 				}
-				System.out.println(count);
 				xPointOne = xPointTwo;
 				yPointOne = yPointTwo;
 				xPointTwo += getWidth()/NDECADES;
