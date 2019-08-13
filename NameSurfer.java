@@ -23,7 +23,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	private JTextField putName = new JTextField(TEXT_FIELD_WIDTH);
 	private JButton graph = new JButton("Graph");
 	private JButton clear = new JButton("Clear");
-	private NameSurferDataBase database = new NameSurferDataBase("names-data.txt");
+	private NameSurferDataBase database = new NameSurferDataBase("CS106A-Assignment6/names-data.txt");
 
 	public void init() {
 		// You fill this in, along with any helper methods //
