@@ -24,16 +24,17 @@ public class NameSurferDataBase implements NameSurferConstants {
 	 * exception if the requested file does not exist or if an error
 	 * occurs as the file is being read.
 	 */
+	List<NameSurferEntry> babyNames;
 	public NameSurferDataBase(String filename) {
 		// You fill this in //
-		ArrayList<String> babyNames = new ArrayList<String>();
+		babyNames = new ArrayList<NameSurferEntry>();
 		String str = "";
 		try{
 			Scanner input = new Scanner(new File("names-data.txt"));
 			while(input.hasNext()) {
-				//String yote = input.nextLine();
+				String yote = input.nextLine();
 				str += input.nextLine();
-				babyNames.add(new NameSurferEntry(line));
+				babyNames.add(new NameSurferEntry(yote));
 			}
 			input.close();
 		} catch(IOException ex) {
