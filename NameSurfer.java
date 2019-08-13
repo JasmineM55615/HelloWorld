@@ -49,7 +49,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		}
 		char c = Character.toUpperCase(newStrName.charAt(0));
 		String newNew = c + newStr;
-		if(e.getActionCommand().equals("Graph")){
+		if(e.getActionCommand().equalsIgnoreCase("Graph")){
 			redraw();
 			//println("You pressed enter or the button");
 			//println("Graph: " + newNew);
