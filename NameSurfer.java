@@ -81,6 +81,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 			GLine line = new GLine(XSpace, 0, XSpace, getHeight());
 			XSpace += getWidth() / NDECADES;
 			add(line);
+			System.out.println("hi");
 		}
 		GLine otherLineOne = new GLine(0, GRAPH_MARGIN_SIZE, getWidth(), GRAPH_MARGIN_SIZE);
 		add(otherLineOne);
