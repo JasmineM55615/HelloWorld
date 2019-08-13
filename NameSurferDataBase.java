@@ -16,6 +16,7 @@ import java.io.*;
 public class NameSurferDataBase implements NameSurferConstants {
 
 	// TODO: Add instance variables
+	private List<NameSurferEntry> babyNames; //DO YOU NEED TO PUT PRIVATE? AND ARE THERE ANY OTHER PRIVATE VARIABLES
 
 	/**
 	 * Constructor: NameSurferDataBase(filename)
@@ -24,7 +25,6 @@ public class NameSurferDataBase implements NameSurferConstants {
 	 * exception if the requested file does not exist or if an error
 	 * occurs as the file is being read.
 	 */
-	List<NameSurferEntry> babyNames;
 	public NameSurferDataBase(String filename) {
 		// You fill this in //
 		//	babyNames = new ArrayList<NameSurferEntry>();
