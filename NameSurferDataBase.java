@@ -36,7 +36,6 @@ public class NameSurferDataBase implements NameSurferConstants {
 		println("hi");
 	}
 }
-	}
 
 	/**
 	 * Public Method: findEntry(name)
