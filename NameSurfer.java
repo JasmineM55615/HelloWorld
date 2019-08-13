@@ -102,6 +102,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		double yPointTwo = getHeight() - GRAPH_MARGIN_SIZE;
 		for(int i = 0; i < inputs.size(); i++) {
 			for(int j = 0; j < NDECADES; j++) {
+				if()
 				int numOfName = inputs.get(i).getRank(j);
 				yPointOne = numOfName / (getHeight() - (GRAPH_MARGIN_SIZE * 2)) * 100;
 				int mathYTwo = inputs.get(i + 1).getRank(j);
