@@ -73,6 +73,7 @@ public class NameSurferEntry implements NameSurferConstants {
 	 */
 	public String toString() {
 		// You need to turn this stub into a real implementation //
+		String str = name;
 		return "";
 	}
 }
