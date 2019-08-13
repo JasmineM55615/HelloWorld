@@ -56,8 +56,9 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		for(int i = 1; i < lowerCase.length(); i++) {
 			newStr += lowerCase.charAt(i);
 		}
-		if(newStrName != null)
+		if(newStr != null) {
 			c = Character.toUpperCase(lowerCase.charAt(0));
+		}
 		String newNew = c + newStr;
 		if(e.getActionCommand().equals("Graph")){
 			redraw();
