@@ -27,6 +27,8 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	private JButton clear = new JButton("Clear");
 	private NameSurferDataBase database;
 	private ArrayList<NameSurferEntry> inputs = new ArrayList<NameSurferEntry>();
+	private Color[] colors = {Color.BLACK, Color.RED, Color.BLUE, Color.MAGENTA};
+	private int counter = 0;
 
 	public void init() {
 		database = new NameSurferDataBase("names-data.txt");
@@ -46,9 +48,6 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 * 
 	 * 
 	 */
-
-	private Color[] colors = {Color.BLACK, Color.RED, Color.BLUE, Color.MAGENTA};
-	private int counter = 0;
 	
 	public void actionPerformed(ActionEvent e) {
 		String newStrName = putName.getText();
