@@ -46,6 +46,11 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 * clicked, so you will have to define a method to respond to
 	 * button actions.
 	 * 
+	 * draws the data according to the name the user inputs. 
+	 * the labels which include the name the user inputted
+	 * and the number of how popular that name is during
+	 * each decade from 1900 to 2000 is displayed on the
+	 * canvas through a graph
 	 * 
 	 */
 	
@@ -96,16 +101,16 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 					}
 					if(yPointTwo > GRAPH_MARGIN_SIZE) {
 						GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
-						lineOnGraph.setColor(col);
+						lineOnGraph.setColor(col); //set the color of the lines on the graph to the color chosen through the four colors
 						add(lineOnGraph);
 					}
 					xPointOne = xPointTwo;
 					yPointOne = yPointTwo;
-					xPointTwo += getWidth()/NDECADES;
+					xPointTwo += getWidth() / NDECADES;
 				}
 			}
 		}
-		if (e.getActionCommand().equals("Clear")) {
+		if (e.getActionCommand().equals("Clear")) { //when clear is pressed, the data on the canvas is removed such as the lines and the labels, then calls the redraw() method
 			inputs.clear();
 			counter = 0;
 			redraw();
@@ -115,6 +120,8 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	/**
 	 * This class is responsible for detecting when the the canvas
 	 * is resized. This method is called on each resize!
+	 * 
+	 * 
 	 */
 	public void componentResized(ComponentEvent e) { 
 		redraw();
@@ -124,6 +131,10 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 * A helper method that we *strongly* recommend. Redraw clears the
 	 * entire display and repaints it. Consider calling it when you change
 	 * anything about the display.
+	 * 
+	 * initially removes the data from the canvas including the graph 
+	 * lines and labels, and draws all that was stored before so previous
+	 * names and their data show up
 	 */
 	private void redraw() {
 		removeAll();
@@ -169,8 +180,8 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 					yPointOne = getHeight()-GRAPH_MARGIN_SIZE;
 				}else {
 					GLabel nameLabel = new GLabel("" + theName + " " + ((int) numOfName));
-					nameLabel.setColor(col);
-					yPointOne = (numOfName / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE;
+					nameLabel.setColor(col); //sets the label to the color chosen from the four colors
+					yPointOne = (numOfName / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE; //gets the y coordinate of the beginning of the line 
 					add(nameLabel, xPointOne, yPointOne);
 				}
 				if(mathYTwo == 0) {
