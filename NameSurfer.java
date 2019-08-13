@@ -181,7 +181,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 				}else {
 					GLabel nameLabel = new GLabel("" + theName + " " + ((int) numOfName));
 					nameLabel.setColor(col); //sets the label to the color chosen from the four colors
-					yPointOne = (numOfName / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE; //gets the y coordinate of the beginning of the line 
+					yPointOne = (numOfName / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE; //finds the point of the first y coordinate using the number of the decade
 					add(nameLabel, xPointOne, yPointOne);
 				}
 				if(mathYTwo == 0) {
