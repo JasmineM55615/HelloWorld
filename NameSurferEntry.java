@@ -75,7 +75,7 @@ public class NameSurferEntry implements NameSurferConstants {
 		// You need to turn this stub into a real implementation //
 		String str = name + " [ ";
 		for(int i = 0; i < NDECADES; i ++) {
-			String num = numbers[i];
+			str += numbers[i] + ", ";
 		}
 		return "";
 	}
