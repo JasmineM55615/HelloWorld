@@ -60,7 +60,7 @@ public class NameSurferEntry implements NameSurferConstants {
 	 */
 	public int getRank(int decade) {
 		// You need to turn this stub into a real implementation //
-		return numbers();
+		return numbers[decade];
 	}
 
 	/**
