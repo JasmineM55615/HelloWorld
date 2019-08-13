@@ -61,7 +61,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 				inputs.add(t);
 				double xPointOne = 0;
 				double yPointOne = getHeight() - GRAPH_MARGIN_SIZE;
-				double xPointTwo = getWidth()/10;
+				double xPointTwo = getWidth()/NDECADES;
 				double yPointTwo = getHeight() - GRAPH_MARGIN_SIZE;
 				
 				for(int j = 0; j < NDECADES; j++) {
@@ -89,7 +89,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 					System.out.println("hi");
 					xPointOne = xPointTwo;
 					yPointOne = yPointTwo;
-					xPointTwo += getWidth()/10;
+					xPointTwo += getWidth()/NDECADES;
 				}
 				//println("You pressed enter or the button");
 				//println("Graph: " + newNew);
