@@ -116,6 +116,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 				}
 				GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
 				add(lineOnGraph);
+				System.out.println("hi");
 				xPointOne = xPointTwo;
 				yPointOne = yPointTwo;
 				xPointOne += GRAPH_MARGIN_SIZE;
