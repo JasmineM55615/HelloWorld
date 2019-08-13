@@ -40,6 +40,8 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 * clicked, so you will have to define a method to respond to
 	 * button actions.
 	 */
+	private ArrayList<NameSurferEntry> inputs = new ArrayList<NameSurferEntry>();
+	
 	public void actionPerformed(ActionEvent e) {
 		String newStrName = putName.getText();
 		newStrName.toLowerCase();
@@ -51,6 +53,39 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		String newNew = c + newStr;
 		if(e.getActionCommand().equals("Graph")){
 			redraw();
+
+			double xPointOne = 0;
+			double yPointOne = getHeight() - GRAPH_MARGIN_SIZE;
+			double xPointTwo = GRAPH_MARGIN_SIZE;
+			double yPointTwo = getHeight() - GRAPH_MARGIN_SIZE;
+			
+			for(int j = 0; j < NDECADES; j++) {
+					System.out.println("yuh");
+					int numOfName = inputs.get(i).getRank(j);
+					String theName = inputs.get(i).getName();
+					if(theName == null) {
+						break;
+					}else
+						yPointOne = numOfName / (getHeight() - (GRAPH_MARGIN_SIZE * 2)) * 100;
+					int mathYTwo = inputs.get(i + 1).getRank(j);
+					if(numOfName == 0) {
+						String nameStr = "" + theName + "*";
+						GLabel nameLabel = new GLabel(nameStr);
+						add(nameLabel, xPointOne, getHeight() - GRAPH_MARGIN_SIZE);
+					}else {
+						GLabel nameLabel = new GLabel("" + theName + " " + numOfName);
+						yPointTwo = mathYTwo / (getHeight() - (GRAPH_MARGIN_SIZE * 2)) * 100;
+						add(nameLabel, xPointOne, yPointOne);
+					}
+					System.out.println();
+				}
+				GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
+				add(lineOnGraph);
+				System.out.println("hi");
+				xPointOne = xPointTwo;
+				yPointOne = yPointTwo;
+				xPointOne += GRAPH_MARGIN_SIZE;
+			}
 			//println("You pressed enter or the button");
 			//println("Graph: " + newNew);
 		}
@@ -73,7 +108,6 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 * entire display and repaints it. Consider calling it when you change
 	 * anything about the display.
 	 */
-	private ArrayList<NameSurferEntry> inputs = new ArrayList<NameSurferEntry>();
 	private void redraw() {
 		// You fill this in //
 		int XSpace = 0;
