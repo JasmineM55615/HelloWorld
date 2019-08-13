@@ -24,15 +24,15 @@ public class NameSurferEntry implements NameSurferConstants {
 	
 	public NameSurferEntry(String line) {
 		// You fill this in //
-		try{
-			Scanner input = new Scanner(new File("names-data.txt"));
-			while(input.hasNext()) {
-				
-			}
-			input.close();
-		}catch(IOException ex) {
-			println("hi");
-		}
+//		try{
+//			Scanner input = new Scanner(new File("names-data.txt"));
+//			while(input.hasNext()) {
+//				
+//			}
+//			input.close();
+//		}catch(IOException ex) {
+//			println("hi");
+//		}
 	}
 
 
