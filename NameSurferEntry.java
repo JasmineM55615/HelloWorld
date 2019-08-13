@@ -77,9 +77,9 @@ public class NameSurferEntry implements NameSurferConstants {
 		for(int i = 0; i < NDECADES; i ++) {
 			str += numbers[i] + ", ";
 		}
-		String sub = (str.substring(str.length() - 2, str.length());
+		str = (str.substring(0, str.length() - 2)) + "]";
 		//substring last two characters ", " and remove 
-		return "";
+		return str;
 	}
 }
 
