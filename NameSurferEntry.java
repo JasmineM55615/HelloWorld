@@ -27,6 +27,7 @@ public class NameSurferEntry implements NameSurferConstants {
 		name = temp[0];
 		for(int i = 1; i < temp.length; i++) {
 			numbers[i - 1] = temp[i];
+			//integer.parcent
 		}
 		// You fill this in //
 //		try{
