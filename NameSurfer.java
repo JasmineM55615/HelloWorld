@@ -72,6 +72,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 * entire display and repaints it. Consider calling it when you change
 	 * anything about the display.
 	 */
+	private ArrayList<String> inputs = new ArrayList<String>();
 	private void redraw() {
 		// You fill this in //
 		int XSpace = 0;
