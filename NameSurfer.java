@@ -65,9 +65,9 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 				double yPointTwo = getHeight() - GRAPH_MARGIN_SIZE;
 				
 				for(int j = 0; j < NDECADES; j++) {
-					int numOfName = t.getRank(j);
+					double numOfName = t.getRank(j);
 					String theName = t.getName();
-					int mathYTwo = t.getRank(j+1);
+					double mathYTwo = t.getRank(j+1);
 					if(numOfName == 0 || numOfName == 1000) {
 						String nameStr = "" + theName + " *";
 						GLabel nameLabel = new GLabel(nameStr);
