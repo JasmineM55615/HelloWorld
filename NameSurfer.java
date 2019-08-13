@@ -65,29 +65,27 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 				double yPointTwo = getHeight() - GRAPH_MARGIN_SIZE;
 				
 				for(int j = 0; j < NDECADES; j++) {
-						int numOfName = t.getRank(j);
-						String theName = t.getName();
-						if(theName == null) {
-							break;
-						}else
-							yPointOne = (numOfName / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE;
-						int mathYTwo = t.getRank(j+1);
-						if(numOfName == 0) {
-							String nameStr = "" + theName + "*";
-							GLabel nameLabel = new GLabel(nameStr);
-							add(nameLabel, xPointOne, getHeight() - GRAPH_MARGIN_SIZE);
-						}else {
-							GLabel nameLabel = new GLabel("" + theName + " " + numOfName);
-							yPointTwo = (mathYTwo / 1000)*(getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE;
-							add(nameLabel, xPointOne, yPointOne);
-						}
-						GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
-						add(lineOnGraph);
-						System.out.println("hi");
-						xPointOne = xPointTwo;
-						yPointOne = yPointTwo;
-						xPointTwo += getWidth()/10;
+					int numOfName = t.getRank(j);
+					String theName = t.getName();
+					yPointOne = (numOfName / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE;
+					int mathYTwo = t.getRank(j+1);
+					if(numOfName == 0 || numOfName == 1000) {
+						String nameStr = "" + theName + " *";
+						GLabel nameLabel = new GLabel(nameStr);
+						add(nameLabel, xPointOne, getHeight() - GRAPH_MARGIN_SIZE);
+						yPointOne(getHeight-GRAPH_MARGIN_SIZE);
+					}else {
+						GLabel nameLabel = new GLabel("" + theName + " " + numOfName);
+						yPointTwo = (mathYTwo / 1000)*(getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE;
+						add(nameLabel, xPointOne, yPointOne);
 					}
+					GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
+					add(lineOnGraph);
+					System.out.println("hi");
+					xPointOne = xPointTwo;
+					yPointOne = yPointTwo;
+					xPointTwo += getWidth()/10;
+				}
 				//println("You pressed enter or the button");
 				//println("Graph: " + newNew);
 			}
