@@ -7,6 +7,8 @@
 
 import acm.graphics.*;
 import acm.program.*;
+
+import java.awt.Color;
 import java.awt.event.*;
 import javax.swing.*;
 import java.util.*;
@@ -44,6 +46,9 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	 */
 	private ArrayList<NameSurferEntry> inputs = new ArrayList<NameSurferEntry>();
 	
+	private Color[] colors = {Color.BLACK, Color.RED, Color.BLUE, Color.MAGENTA};
+	private int counter = 0;
+	
 	public void actionPerformed(ActionEvent e) {
 		String newStrName = putName.getText();
 		newStrName.toLowerCase();
@@ -57,6 +62,9 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 			redraw();
 
 			if(newNew != null) {
+				int newcounter = counter%4;
+				Color col = colors[newcounter];
+				counter+=1;
 				NameSurferEntry t = database.findEntry(newNew);
 				inputs.add(t);
 				double xPointOne = 0;
@@ -71,6 +79,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 					if(numOfName == 0 || numOfName == 1000) {
 						String nameStr = "" + theName + " *";
 						GLabel nameLabel = new GLabel(nameStr);
+						nameLabel.setColor(col);
 						add(nameLabel, xPointOne, getHeight() - GRAPH_MARGIN_SIZE);
 						yPointOne = getHeight()-GRAPH_MARGIN_SIZE;
 					}else {
@@ -85,6 +94,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 					}
 					if(yPointTwo > 20) {
 						GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
+						lineOnGraph.setColor(col);
 						add(lineOnGraph);
 					}
 					xPointOne = xPointTwo;
@@ -141,7 +151,11 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		double yPointOne = getHeight() - GRAPH_MARGIN_SIZE;
 		double xPointTwo = getWidth()/NDECADES;
 		double yPointTwo = getHeight() - GRAPH_MARGIN_SIZE;
+		int count = 0;
 		for(int i = 0; i < inputs.size(); i++) {
+			int newcounter = count%4;
+			Color col = colors[newcounter];
+			count+=1;
 			for(int j = 0; j < NDECADES; j++) {
 				double numOfName = inputs.get(i).getRank(j);
 				String theName = inputs.get(i).getName();
@@ -149,6 +163,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 				if(numOfName == 0 || numOfName == 1000) {
 					String nameStr = "" + theName + " *";
 					GLabel nameLabel = new GLabel(nameStr);
+					nameLabel.setColor(col);
 					add(nameLabel, xPointOne, getHeight() - GRAPH_MARGIN_SIZE);
 					yPointOne = getHeight()-GRAPH_MARGIN_SIZE;
 				}else {
@@ -163,6 +178,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 				}
 				if(yPointTwo > 20) {
 					GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
+					lineOnGraph.setColor(col);
 					add(lineOnGraph);
 				}
 				xPointOne = xPointTwo;
