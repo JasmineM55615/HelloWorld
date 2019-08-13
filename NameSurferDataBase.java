@@ -30,7 +30,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 		try{
 			Scanner input = new Scanner(new File("names-data.txt"));
 			while(input.hasNext()) {
-				str += input.next();
+				str += input.nextLine();
 			}
 			input.close();
 		} catch(IOException ex) {
