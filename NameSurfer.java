@@ -97,10 +97,12 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		//
 		double XPointOne = 0;
 		double YPointOne = getHeight() - GRAPH_MARGIN_SIZE;
-		for(int lines = 0; lines < NDECADES; lines++) {
-			GLine lineOnGraph = new GLine(XPoint);
-			int YMath = inputs.getRank(lines);
-					
+		for(int i = 0; i < inputs.size(); i++) {
+			for(int lines = 0; lines < NDECADES; lines++) {
+				GLine lineOnGraph = new GLine(XPoint);
+				int YMath = inputs.get(i).getRank(lines);
+						
+			}
 		}
 		for(int i = 0; i < inputs.size(); i++) {
 			for(int j = 0; j < NDECADES; j++) {
