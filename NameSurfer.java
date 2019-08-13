@@ -84,7 +84,6 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 			//System.out.println("hi");
 		}
 		GLine otherLineOne = new GLine(0, GRAPH_MARGIN_SIZE, getWidth(), GRAPH_MARGIN_SIZE);
-		System.out.println("hi");
 		add(otherLineOne);
 		GLine otherLineTwo = new GLine(0, getHeight() - GRAPH_MARGIN_SIZE, getWidth(), getHeight() - GRAPH_MARGIN_SIZE);
 		add(otherLineTwo);
@@ -95,6 +94,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 			decade+= 10;
 			add(decadeDisplay, decadeSpace, getHeight() - DECADE_LABEL_MARGIN_SIZE);
 			decadeSpace += getWidth() / NDECADES;
+			System.out.println("hi");
 		}
 		//for loop for drawing the lines 
 		//
