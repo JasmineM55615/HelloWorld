@@ -30,7 +30,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 		//	babyNames = new ArrayList<NameSurferEntry>();
 		try{
 			Scanner input = new Scanner(new File(filename));
-			while(input.hasNext()) {
+			while(input.hasNextLine()) {
 				String yote = input.nextLine();
 				System.out.println(yote);
 				NameSurferEntry t = new NameSurferEntry(yote);
