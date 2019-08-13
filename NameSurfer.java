@@ -129,7 +129,6 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	private void redraw() {
 		// You fill this in //
 		removeAll();
-		System.out.println(inputs);
 		
 		int XSpace = 0;
 		for(int i = 0; i < NDECADES; i++) {
