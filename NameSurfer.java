@@ -94,7 +94,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 					} else {
 						yPointTwo = (mathYTwo / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE;
 					}
-					if(yPointTwo > 20) {
+					if(yPointTwo > NDECADES) {
 						GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
 						lineOnGraph.setColor(col);
 						add(lineOnGraph);
@@ -178,9 +178,9 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 				} else {
 					yPointTwo = (mathYTwo / 1000) * (getHeight() - (GRAPH_MARGIN_SIZE * 2)) + GRAPH_MARGIN_SIZE;
 				}
-				if(yPointTwo > 20) {
+				if(yPointTwo > NDECADES) {
 					GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
-					lineOnGraph.setColor(col);
+					lineOnGraph.setColor(col); //sets the color of the label depending on the variable counter
 					add(lineOnGraph);
 				}
 				xPointOne = xPointTwo;
