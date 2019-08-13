@@ -100,7 +100,9 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 				int YOne = inputs.get(i).getRank(j);
 				if(YOne == 0 || YOne == 1000) {
 					String nameLabel = "" + inputs.get(i).getName() + "*";
-				}else if()
+				}else {
+					nameLabel = 
+				}
 			}
 		}
 		//forloop for lines (- 1)
