@@ -27,7 +27,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 
 	public void init() {
 		// You fill this in, along with any helper methods //
-		database = new NameSurferDataBase("CS106A-Assignment6/names-data.txt");
+		database = new NameSurferDataBase("names-data.txt");
 		add(label, NORTH);
 		putName.addActionListener(this);
 		putName.setActionCommand("Graph");
