@@ -23,6 +23,7 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 	private JTextField putName = new JTextField(TEXT_FIELD_WIDTH);
 	private JButton graph = new JButton("Graph");
 	private JButton clear = new JButton("Clear");
+	private NameSurferDataBase database = new NameSurferDataBase("names-data.txt");
 
 	public void init() {
 		// You fill this in, along with any helper methods //
@@ -55,20 +56,21 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 			redraw();
 
 			if(newNew != null) {
+				NameSurferEntry t = database.findEntry(newNew);
+				inputs.add(t);
 				double xPointOne = 0;
 				double yPointOne = getHeight() - GRAPH_MARGIN_SIZE;
 				double xPointTwo = GRAPH_MARGIN_SIZE;
 				double yPointTwo = getHeight() - GRAPH_MARGIN_SIZE;
 				
 				for(int j = 0; j < NDECADES; j++) {
-						System.out.println("yuh");
-						int numOfName = inputs.get(i).getRank(j);
-						String theName = inputs.get(i).getName();
+						int numOfName = t.getRank(j);
+						String theName = t.getName();
 						if(theName == null) {
 							break;
 						}else
 							yPointOne = numOfName / (getHeight() - (GRAPH_MARGIN_SIZE * 2)) * 100;
-						int mathYTwo = inputs.get(i + 1).getRank(j);
+						int mathYTwo = t.getRank(j+1);
 						if(numOfName == 0) {
 							String nameStr = "" + theName + "*";
 							GLabel nameLabel = new GLabel(nameStr);
@@ -78,14 +80,13 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 							yPointTwo = mathYTwo / (getHeight() - (GRAPH_MARGIN_SIZE * 2)) * 100;
 							add(nameLabel, xPointOne, yPointOne);
 						}
-						System.out.println();
+						GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
+						add(lineOnGraph);
+						System.out.println("hi");
+						xPointOne = xPointTwo;
+						yPointOne = yPointTwo;
+						xPointOne += GRAPH_MARGIN_SIZE;
 					}
-					GLine lineOnGraph = new GLine(xPointOne, yPointOne, xPointTwo, yPointTwo);
-					add(lineOnGraph);
-					System.out.println("hi");
-					xPointOne = xPointTwo;
-					yPointOne = yPointTwo;
-					xPointOne += GRAPH_MARGIN_SIZE;
 				//println("You pressed enter or the button");
 				//println("Graph: " + newNew);
 			}
