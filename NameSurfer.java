@@ -64,9 +64,9 @@ public class NameSurfer extends GraphicsProgram implements NameSurferConstants {
 		if(e.getActionCommand().equals("Graph")){
 			redraw();
 			if(database.findEntry(newNew) != null) {
-				int newcounter = counter % 4;
+				int newcounter = counter % 4; //takes the counter variable mod 4 to rotate the color of the graph using four color
 				Color col = colors[newcounter];
-				counter+=1;
+				counter += 1;
 				NameSurferEntry t = database.findEntry(newNew);
 				inputs.add(t);
 				double xPointOne = 0;
